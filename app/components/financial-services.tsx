@@ -4,25 +4,25 @@ import { BankIcon, PostpaidIcon, UpiIcon, WalletIcon } from "./icons"
 const services = [
   {
     id: "wallet",
-    title: "Paytm Wallet",
-    desc: "Add money and pay anywhere with your Paytm Wallet.",
+    title: "Mopay Wallet",
+    desc: "Add money and pay anywhere with your Mopay Wallet.",
     Icon: WalletIcon,
   },
   {
     id: "bank",
-    title: "Paytm Payments Bank",
+    title: "Mopay Bank",
     desc: "Zero balance savings account with seamless payments.",
     Icon: BankIcon,
   },
   {
     id: "upi",
-    title: "UPI on Paytm",
+    title: "UPI on Mopay",
     desc: "Instant money transfer with secure UPI payments.",
     Icon: UpiIcon,
   },
   {
     id: "postpaid",
-    title: "Paytm Postpaid",
+    title: "Mopay Postpaid",
     desc: "Buy now, pay later with flexible credit.",
     Icon: PostpaidIcon,
   },
@@ -32,7 +32,7 @@ export function FinancialServices() {
   return (
     <section id="wallet" className="w-full bg-background">
       <div className="mx-auto max-w-7xl px-4 py-12 md:py-16">
-        <h2 className="text-balance text-2xl font-semibold md:text-3xl">Financial Services by Paytm</h2>
+        <h2 className="text-balance text-2xl font-semibold md:text-3xl">Financial Services by Mopay</h2>
         <p className="mt-2 max-w-prose text-sm text-foreground/80 md:text-base">
           Explore Wallet, Banking, UPI, and Postpaid services in one app.
         </p>

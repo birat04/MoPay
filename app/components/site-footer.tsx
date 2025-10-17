@@ -136,7 +136,7 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-8 border-t pt-6 text-center text-xs text-foreground/70">
-          © {new Date().getFullYear()} Paytm Frontend Clone. For demonstration only.
+          © {new Date().getFullYear()} Mopay. For demonstration only.
         </div>
       </div>
     </footer>

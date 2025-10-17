@@ -9,7 +9,7 @@ export default function MoneyPage() {
       <SiteHeader />
       <div className="mx-auto max-w-7xl px-4 py-12">
         <div className="mb-8">
-          <h1 className="text-4xl font-bold text-primary">Paytm Money</h1>
+          <h1 className="text-4xl font-bold text-primary">Mopay Money</h1>
           <p className="mt-2 text-lg text-foreground/70">Invest smart, grow wealth</p>
         </div>
 

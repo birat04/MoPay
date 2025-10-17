@@ -1,13 +1,13 @@
-# Paytm - Digital Payment Platform
+# Mopay - Digital Payment Platform
 
-A modern, responsive web application inspired by Paytm's digital payment ecosystem. Built with Next.js 15, React 19, and TypeScript, featuring a comprehensive suite of financial services and payment solutions.
+A modern, responsive web application for digital payments and financial services. Built with Next.js 15, React 19, and TypeScript, featuring a comprehensive suite of financial services and payment solutions.
 
 ## Features
 
 ### 🏦 Core Services
-- **Paytm Wallet** - Digital wallet management and transactions
-- **Paytm Payments Bank** - Banking services and account management  
-- **Paytm Money** - Investment and wealth management platform
+- **Mopay Wallet** - Digital wallet management and transactions
+- **Mopay Bank** - Banking services and account management  
+- **Mopay Money** - Investment and wealth management platform
 - **UPI Payments** - Unified Payments Interface integration
 - **Postpaid Services** - Credit and bill payment solutions
 
@@ -77,9 +77,9 @@ app/
 │   ├── offers-carousel.tsx
 │   ├── transaction-list.tsx
 │   └── theme-toggle.tsx
-├── wallet/              # Paytm Wallet pages
-├── bank/                # Paytm Payments Bank pages
-├── money/               # Paytm Money pages
+├── wallet/              # Mopay Wallet pages
+├── bank/                # Mopay Bank pages
+├── money/               # Mopay Money pages
 ├── upi/                 # UPI payment pages
 ├── postpaid/            # Postpaid service pages
 ├── layout.tsx           # Root layout
@@ -104,4 +104,4 @@ app/
 
 ## License
 
-This project is for educational purposes and is inspired by Paytm's design and functionality.
+This project is for educational purposes and demonstrates modern web development practices for financial applications.

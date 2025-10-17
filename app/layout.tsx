@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Paytm",
-  description: "Paytm is a digital payment platform that allows you to make payments and transfers online.",
+  title: "Mopay",
+  description: "Mopay is a digital payment platform that allows you to make payments and transfers online.",
 };
 
 export default function RootLayout({

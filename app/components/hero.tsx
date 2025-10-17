@@ -17,7 +17,7 @@ export function Hero() {
     <section className="relative w-full bg-primary text-primary-foreground">
       <div className="mx-auto grid max-w-7xl gap-6 px-4 py-10 md:grid-cols-2 md:py-14">
         <div>
-          <h1 className="text-balance text-3xl font-semibold md:text-4xl">Recharge & Pay Bills on Paytm</h1>
+          <h1 className="text-balance text-3xl font-semibold md:text-4xl">Recharge & Pay Bills on Mopay</h1>
           <p className="mt-2 max-w-prose text-sm/6 opacity-90 md:text-base">
             Fast, secure payments for all your everyday needs.
           </p>

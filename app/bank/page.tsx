@@ -9,7 +9,7 @@ export default function BankPage() {
       <SiteHeader />
       <div className="mx-auto max-w-7xl px-4 py-12">
         <div className="mb-8">
-          <h1 className="text-4xl font-bold text-primary">Paytm Payments Bank</h1>
+          <h1 className="text-4xl font-bold text-primary">Mopay Bank</h1>
           <p className="mt-2 text-lg text-foreground/70">Banking services designed for you</p>
         </div>
 

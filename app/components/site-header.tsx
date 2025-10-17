@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { Button } from "./ui/button"
 import { cn } from "./lib/utils"
-import { ThemeToggle } from "@/app/components/theme-toggle"
+import { ThemeToggle } from "./theme-toggle"
 
 export function SiteHeader() {
   return (
@@ -17,27 +17,27 @@ export function SiteHeader() {
         <nav aria-label="Primary" className="hidden md:block">
           <ul className="flex items-center gap-6">
             <li>
-              <Link href="#wallet" className="text-sm text-foreground/80 transition-colors hover:text-primary">
+              <Link href="/wallet" className="text-sm text-foreground/80 transition-colors hover:text-primary">
                 Paytm Wallet
               </Link>
             </li>
             <li>
-              <Link href="#bank" className="text-sm text-foreground/80 transition-colors hover:text-primary">
+              <Link href="/bank" className="text-sm text-foreground/80 transition-colors hover:text-primary">
                 Paytm Payments Bank
               </Link>
             </li>
             <li>
-              <Link href="#money" className="text-sm text-foreground/80 transition-colors hover:text-primary">
+              <Link href="/money" className="text-sm text-foreground/80 transition-colors hover:text-primary">
                 Paytm Money
               </Link>
             </li>
             <li>
-              <Link href="#upi" className="text-sm text-foreground/80 transition-colors hover:text-primary">
+              <Link href="/upi" className="text-sm text-foreground/80 transition-colors hover:text-primary">
                 UPI
               </Link>
             </li>
             <li>
-              <Link href="#postpaid" className="text-sm text-foreground/80 transition-colors hover:text-primary">
+              <Link href="/postpaid" className="text-sm text-foreground/80 transition-colors hover:text-primary">
                 Postpaid
               </Link>
             </li>

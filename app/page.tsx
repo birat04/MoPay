@@ -29,6 +29,8 @@ export default function Page() {
       status: "Pending",
     },
     { id: "t3", title: "Movie Tickets • PVR", date: "Oct 09, 2025 • 8:20 PM", amount: "₹780", status: "Failed" },
+
+    
     
   ]
 

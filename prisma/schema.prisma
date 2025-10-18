@@ -1,0 +1,174 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  phone     String   @unique
+  name      String
+  kycStatus KycStatus @default(PENDING)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  wallet        Wallet?
+  bankAccounts  BankAccount[]
+  upiProfile    UpiProfile?
+  postpaidAccount PostpaidAccount?
+  transactions  Transaction[]
+  notifications Notification[]
+
+  @@map("users")
+}
+
+model Wallet {
+  id        String   @id @default(cuid())
+  userId    String   @unique
+  balance   Decimal  @default(0) @db.Decimal(10, 2)
+  currency  String   @default("INR")
+  status    WalletStatus @default(ACTIVE)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  user         User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  transactions Transaction[]
+
+  @@map("wallets")
+}
+
+model BankAccount {
+  id           String   @id @default(cuid())
+  userId       String
+  accountNumber String
+  ifscCode     String
+  bankName     String
+  isVerified   Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  // Relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("bank_accounts")
+}
+
+model UpiProfile {
+  id        String   @id @default(cuid())
+  userId    String   @unique
+  vpa       String   @unique
+  upiId     String   @unique
+  isVerified Boolean @default(false)
+  qrCode    String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("upi_profiles")
+}
+
+model PostpaidAccount {
+  id          String   @id @default(cuid())
+  userId      String   @unique
+  creditLimit Decimal  @db.Decimal(10, 2)
+  usedAmount  Decimal  @default(0) @db.Decimal(10, 2)
+  dueDate     DateTime
+  status      PostpaidStatus @default(ACTIVE)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("postpaid_accounts")
+}
+
+model Transaction {
+  id          String            @id @default(cuid())
+  userId      String
+  walletId    String?
+  type        TransactionType
+  amount      Decimal           @db.Decimal(10, 2)
+  status      TransactionStatus @default(PENDING)
+  referenceId String?           @unique
+  description String?
+  metadata    Json?
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+
+  // Relations
+  user   User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  wallet Wallet? @relation(fields: [walletId], references: [id])
+
+  @@map("transactions")
+}
+
+model Notification {
+  id        String   @id @default(cuid())
+  userId    String
+  title     String
+  message   String
+  type      NotificationType
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  // Relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("notifications")
+}
+
+// Enums
+enum KycStatus {
+  PENDING
+  VERIFIED
+  REJECTED
+}
+
+enum WalletStatus {
+  ACTIVE
+  SUSPENDED
+  CLOSED
+}
+
+enum PostpaidStatus {
+  ACTIVE
+  SUSPENDED
+  CLOSED
+}
+
+enum TransactionType {
+  WALLET_TOPUP
+  WALLET_TRANSFER
+  UPI_SEND
+  UPI_RECEIVE
+  BANK_TRANSFER
+  BILL_PAYMENT
+  RECHARGE
+  POSTPAID_PAYMENT
+}
+
+enum TransactionStatus {
+  PENDING
+  SUCCESS
+  FAILED
+  CANCELLED
+}
+
+enum NotificationType {
+  TRANSACTION
+  PAYMENT
+  KYC
+  SYSTEM
+}

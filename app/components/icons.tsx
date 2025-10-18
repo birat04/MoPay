@@ -22,7 +22,7 @@ function SvgBase({ title, children, ...props }: IconProps & { children: React.Re
   )
 }
 
-/* Recharge & Bills */
+
 export function MobileIcon(props: IconProps) {
   return (
     <SvgBase {...props}>
@@ -83,7 +83,7 @@ export function CreditCardIcon(props: IconProps) {
   )
 }
 
-/* Book & Buy */
+
 export function MoviesIcon(props: IconProps) {
   return (
     <SvgBase {...props}>
@@ -128,7 +128,7 @@ export function BusIcon(props: IconProps) {
   )
 }
 
-/* Financial Services */
+
 export function WalletIcon(props: IconProps) {
   return (
     <SvgBase {...props}>
@@ -170,7 +170,7 @@ export function PostpaidIcon(props: IconProps) {
   )
 }
 
-/* Social */
+
 export function FacebookIcon(props: IconProps) {
   return (
     <SvgBase {...props}>
@@ -215,7 +215,7 @@ export function LinkedinIcon(props: IconProps) {
   )
 }
 
-/* Additional Icons for Bottom Nav and Utilities */
+
 export function HomeIcon(props: IconProps) {
   return (
     <SvgBase {...props}>

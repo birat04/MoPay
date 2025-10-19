@@ -32,7 +32,7 @@ export async function POST(request: NextRequest) {
         name,
         email,
         phone,
-        // password: hashedPassword, // Add this field to schema if needed
+        password: hashedPassword,
         wallet: {
           create: {
             balance: 0,

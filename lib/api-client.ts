@@ -1,49 +1,18 @@
 // API client for frontend to backend communication
-const API_BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001'
 
 class ApiClient {
-  private baseURL: string
-  private token: string | null = null
+  private baseURL: string = API_BASE_URL
 
-  constructor(baseURL: string = API_BASE_URL) {
-    this.baseURL = baseURL
-  }
-
-  setToken(token: string) {
-    this.token = token
-  }
-
-  private async request<T>(
-    endpoint: string,
-    options: RequestInit = {}
-  ): Promise<T> {
-    const url = `${this.baseURL}/api${endpoint}`
+  private async request<T>(endpoint: string, options: RequestInit = {}): Promise<T> {
+    const url = `${this.baseURL}${endpoint}`
     
-    const headers: Record<string, string> = {
-      'Content-Type': 'application/json',
-      ...(options.headers as Record<string, string>),
-    }
-
-    if (this.token) {
-      headers.Authorization = `Bearer ${this.token}`
-    }
-
-    const response = await fetch(url, {
-      ...options,
-      headers,
-    })
-
-    if (!response.ok) {
-      const error = await response.json()
-      throw new Error(error.error || 'API request failed')
-    }
-
+    const response = await fetch(url, options)
     return response.json()
   }
 
-  // Auth methods
   async login(email: string, password: string) {
-    return this.request('/auth/login', {
+    return this.request('/api/auth/login', {
       method: 'POST',
       body: JSON.stringify({ email, password }),
     })

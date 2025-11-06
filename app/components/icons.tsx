@@ -22,7 +22,7 @@ function SvgBase({ title, children, ...props }: IconProps & { children: React.Re
   )
 }
 
-
+/* Recharge & Bills */
 export function MobileIcon(props: IconProps) {
   return (
     <SvgBase {...props}>
@@ -83,7 +83,17 @@ export function CreditCardIcon(props: IconProps) {
   )
 }
 
+export function BillsIcon(props: IconProps) {
+  return (
+    <SvgBase {...props}>
+      <rect x="4" y="2" width="16" height="20" rx="2" />
+      <path d="M8 6h8M8 10h8M8 14h6" />
+      <path d="M4 18h16" />
+    </SvgBase>
+  )
+}
 
+/* Book & Buy */
 export function MoviesIcon(props: IconProps) {
   return (
     <SvgBase {...props}>
@@ -128,7 +138,7 @@ export function BusIcon(props: IconProps) {
   )
 }
 
-
+/* Financial Services */
 export function WalletIcon(props: IconProps) {
   return (
     <SvgBase {...props}>
@@ -170,7 +180,90 @@ export function PostpaidIcon(props: IconProps) {
   )
 }
 
+/* Payment Gateway Icons */
+export function StripeIcon(props: IconProps) {
+  return (
+    <SvgBase {...props}>
+      <path d="M11 5C5.6 5 1 8.5 1 13c0 3.5 3 6.5 7 6.9v-5.2H6V13h2v-1c0-2.1 1.3-3.3 3.2-3.3.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V13h2.2l-.4 2.3h-1.8v5.2c4 -.4 7-3.4 7-6.9 0-4.5-4.6-8-10-8Z" />
+    </SvgBase>
+  )
+}
 
+export function PaypalIcon(props: IconProps) {
+  return (
+    <SvgBase {...props}>
+      <path d="M8 4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2H8Z" />
+      <path d="M10 9h4M10 13h4" stroke="white" strokeWidth="1" fill="none" />
+    </SvgBase>
+  )
+}
+
+export function GooglePayIcon(props: IconProps) {
+  return (
+    <SvgBase {...props}>
+      <path d="M4 10c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2Z" />
+      <path d="M10 8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2Z" />
+      <path d="M16 10c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2Z" />
+    </SvgBase>
+  )
+}
+
+export function ApplePayIcon(props: IconProps) {
+  return (
+    <SvgBase {...props}>
+      <path d="M7.5 4.5c0-1 .9-1.5 1.5-1.5S11 3.5 11 4.5v11c0 1-.9 1.5-1.5 1.5S7.5 16.5 7.5 15.5v-11Z" />
+      <path d="M13 5c-.5 0-1 .4-1 1s.4 1 1 1 1-.4 1-1-.4-1-1-1Z" />
+    </SvgBase>
+  )
+}
+
+export function PhonePeIcon(props: IconProps) {
+  return (
+    <SvgBase {...props}>
+      <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2Z" />
+      <path d="M12 5v7l5 3" stroke="white" strokeWidth="1.5" fill="none" />
+    </SvgBase>
+  )
+}
+
+export function RazorpayIcon(props: IconProps) {
+  return (
+    <SvgBase {...props}>
+      <rect x="4" y="6" width="16" height="12" rx="2" />
+      <path d="M8 10h8M8 14h8" stroke="white" strokeWidth="1" fill="none" />
+    </SvgBase>
+  )
+}
+
+export function SquareIcon(props: IconProps) {
+  return (
+    <SvgBase {...props}>
+      <rect x="4" y="4" width="16" height="16" rx="2" />
+      <path d="M8 9h8v6H8z" fill="currentColor" />
+    </SvgBase>
+  )
+}
+
+export function NetbanksIcon(props: IconProps) {
+  return (
+    <SvgBase {...props}>
+      <path d="M2 8l10-4 10 4v8H2V8Z" />
+      <path d="M4 16h16" />
+      <path d="M7 10v4M12 10v4M17 10v4" />
+    </SvgBase>
+  )
+}
+
+export function CryptoPayIcon(props: IconProps) {
+  return (
+    <SvgBase {...props}>
+      <circle cx="12" cy="12" r="8" />
+      <path d="M12 8v8M9 11h6" />
+    </SvgBase>
+  )
+}
+
+/* Social */
 export function FacebookIcon(props: IconProps) {
   return (
     <SvgBase {...props}>
@@ -215,7 +308,7 @@ export function LinkedinIcon(props: IconProps) {
   )
 }
 
-
+/* Additional Icons for Bottom Nav and Utilities */
 export function HomeIcon(props: IconProps) {
   return (
     <SvgBase {...props}>
@@ -238,6 +331,15 @@ export function QrScanIcon(props: IconProps) {
   )
 }
 
+export function ScanQrIcon(props: IconProps) {
+  return (
+    <SvgBase {...props}>
+      <path d="M3 3h6v6H3zM15 3h6v6h-6zM3 15h6v6H3zM15 15h6v6h-6z" />
+      <path d="M12 9v6M9 12h6" />
+    </SvgBase>
+  )
+}
+
 export function TagIcon(props: IconProps) {
   return (
     <SvgBase {...props}>
@@ -252,6 +354,42 @@ export function UserIcon(props: IconProps) {
     <SvgBase {...props}>
       <circle cx="12" cy="8" r="3" />
       <path d="M5 20a7 7 0 0 1 14 0" />
+    </SvgBase>
+  )
+}
+
+export function SendIcon(props: IconProps) {
+  return (
+    <SvgBase {...props}>
+      <path d="M21.5 2 3 13.5l6.5 2.5v5L20 3.5l-6.5 2.5h-5L2.5 2l19 .5Z" />
+    </SvgBase>
+  )
+}
+
+export function RequestIcon(props: IconProps) {
+  return (
+    <SvgBase {...props}>
+      <path d="M12 2c5.5 0 10 4.5 10 10s-4.5 10-10 10S2 17.5 2 12 6.5 2 12 2Z" />
+      <path d="M8 12h8M12 9v6" />
+    </SvgBase>
+  )
+}
+
+export function HistoryIcon(props: IconProps) {
+  return (
+    <SvgBase {...props}>
+      <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74M21 3v6h-6" />
+      <path d="M21 12a9 9 0 0 1-9 9 9.76 9.76 0 0 1-6.74-2.74M3 21v-6h6" />
+      <path d="M12 6v6l4 2.5" />
+    </SvgBase>
+  )
+}
+
+export function ShieldIcon(props: IconProps) {
+  return (
+    <SvgBase {...props}>
+      <path d="M12 2l8 4v5c0 5.5-8 8-8 8s-8-2.5-8-8V6l8-4Z" />
+      <path d="M10 12l2 2 4-4" stroke="white" strokeWidth="1.5" fill="none" />
     </SvgBase>
   )
 }

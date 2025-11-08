@@ -46,10 +46,22 @@ export function SiteHeader() {
 
         <div className="flex items-center gap-2">
           <ThemeToggle />
-          <Button variant="secondary" className="hidden md:inline-flex">
-            Sign In
+          <Button 
+            variant="secondary" 
+            className="hidden md:inline-flex"
+            asChild
+          >
+            <Link href="/dashboard">Sign In</Link>
           </Button>
-          <Button className="bg-primary text-primary-foreground hover:bg-primary/90">Download App</Button>
+          <Button 
+            className="bg-primary text-primary-foreground hover:bg-primary/90"
+            onClick={() => {
+              // You can replace this with actual download logic or link
+              window.open("https://example.com/download", "_blank")
+            }}
+          >
+            Download App
+          </Button>
         </div>
       </div>
     </header>

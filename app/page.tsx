@@ -1,10 +1,12 @@
-import { SiteHeader } from "./components/site-header"
-import { Hero } from "./components/hero"
-import { FinancialServices } from "./components/financial-services"
-import { SiteFooter } from "./components/site-footer"
-import { OffersCarousel, type Offer } from "./components/offers-carousel"
-import { TransactionList, type TransactionItem } from "./components/transaction-list"
-import { BottomNav } from "./components/bottom-nav"
+import { SiteHeader } from "@/components/site-header"
+import { Hero } from "@/components/hero"
+import { FinancialServices } from "@/components/financial-services"
+import { SiteFooter } from "@/components/site-footer"
+import { OffersCarousel, type Offer } from "@/components/offers-carousel"
+import { TransactionList, type TransactionItem } from "@/components/transaction-list"
+import { BottomNav } from "@/components/bottom-nav"
+import { UnifiedDashboard } from "@/components/unified-dashboard"
+import { PaymentMethods } from "@/components/payment-methods"
 
 export default function Page() {
   const offers: Offer[] = [
@@ -29,14 +31,23 @@ export default function Page() {
       status: "Pending",
     },
     { id: "t3", title: "Movie Tickets • PVR", date: "Oct 09, 2025 • 8:20 PM", amount: "₹780", status: "Failed" },
-
-    
-    
   ]
 
   return (
     <main>
       <SiteHeader />
+      <div className="mx-auto max-w-7xl px-4 py-8">
+        <section className="mb-12">
+          <h1 className="mb-6 text-2xl font-bold text-foreground">Payment Gateway Hub</h1>
+          <UnifiedDashboard />
+        </section>
+
+        <section className="mb-12">
+          <h2 className="mb-6 text-xl font-semibold text-foreground">All Payment Methods</h2>
+          <PaymentMethods layout="grid" />
+        </section>
+      </div>
+
       <Hero />
       <OffersCarousel items={offers} />
       <TransactionList items={tx} />

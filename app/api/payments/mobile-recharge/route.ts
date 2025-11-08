@@ -28,7 +28,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    if (wallet.balance < amount) {
+    if (wallet.balance.toNumber() < amount) {
       return NextResponse.json(
         { error: 'Insufficient balance' },
         { status: 400 }

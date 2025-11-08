@@ -29,7 +29,7 @@ export async function GET(request: NextRequest) {
         id: postpaidAccount.id,
         creditLimit: postpaidAccount.creditLimit,
         usedAmount: postpaidAccount.usedAmount,
-        availableLimit: postpaidAccount.creditLimit - postpaidAccount.usedAmount,
+        availableLimit: postpaidAccount.creditLimit.toNumber() - postpaidAccount.usedAmount.toNumber(),
         dueDate: postpaidAccount.dueDate,
         status: postpaidAccount.status
       }

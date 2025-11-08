@@ -12,17 +12,17 @@ export function SiteFooter() {
             <h3 className="text-sm font-semibold text-foreground">Company</h3>
             <ul className="mt-3 space-y-2">
               <li>
-                <Link className="text-sm text-foreground/80 hover:text-primary" href="#">
+                <Link className="text-sm text-foreground/80 hover:text-primary" href="/" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
                   About
                 </Link>
               </li>
               <li>
-                <Link className="text-sm text-foreground/80 hover:text-primary" href="#">
+                <Link className="text-sm text-foreground/80 hover:text-primary" href="/" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
                   Careers
                 </Link>
               </li>
               <li>
-                <Link className="text-sm text-foreground/80 hover:text-primary" href="#">
+                <Link className="text-sm text-foreground/80 hover:text-primary" href="/" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
                   Press
                 </Link>
               </li>
@@ -32,22 +32,22 @@ export function SiteFooter() {
             <h3 className="text-sm font-semibold text-foreground">Products</h3>
             <ul className="mt-3 space-y-2">
               <li>
-                <Link className="text-sm text-foreground/80 hover:text-primary" href="#wallet">
+                <Link className="text-sm text-foreground/80 hover:text-primary" href="/wallet">
                   Wallet
                 </Link>
               </li>
               <li>
-                <Link className="text-sm text-foreground/80 hover:text-primary" href="#bank">
+                <Link className="text-sm text-foreground/80 hover:text-primary" href="/bank">
                   Payments Bank
                 </Link>
               </li>
               <li>
-                <Link className="text-sm text-foreground/80 hover:text-primary" href="#upi">
+                <Link className="text-sm text-foreground/80 hover:text-primary" href="/upi">
                   UPI
                 </Link>
               </li>
               <li>
-                <Link className="text-sm text-foreground/80 hover:text-primary" href="#postpaid">
+                <Link className="text-sm text-foreground/80 hover:text-primary" href="/postpaid">
                   Postpaid
                 </Link>
               </li>
@@ -57,17 +57,17 @@ export function SiteFooter() {
             <h3 className="text-sm font-semibold text-foreground">Help</h3>
             <ul className="mt-3 space-y-2">
               <li>
-                <Link className="text-sm text-foreground/80 hover:text-primary" href="#">
+                <Link className="text-sm text-foreground/80 hover:text-primary" href="/settings">
                   Support
                 </Link>
               </li>
               <li>
-                <Link className="text-sm text-foreground/80 hover:text-primary" href="#">
+                <Link className="text-sm text-foreground/80 hover:text-primary" href="/" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
                   FAQ
                 </Link>
               </li>
               <li>
-                <Link className="text-sm text-foreground/80 hover:text-primary" href="#">
+                <Link className="text-sm text-foreground/80 hover:text-primary" href="/settings">
                   Contact
                 </Link>
               </li>
@@ -77,7 +77,9 @@ export function SiteFooter() {
             <h3 className="text-sm font-semibold text-foreground">Follow us</h3>
             <div className="mt-3 flex items-center gap-3">
               <Link
-                href="#"
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="X / Twitter"
                 className="group inline-flex h-9 w-9 items-center justify-center rounded-full bg-background hover:bg-accent"
               >
@@ -88,7 +90,9 @@ export function SiteFooter() {
                 <span className="sr-only">X</span>
               </Link>
               <Link
-                href="#"
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Facebook"
                 className="group inline-flex h-9 w-9 items-center justify-center rounded-full bg-background hover:bg-accent"
               >
@@ -99,7 +103,9 @@ export function SiteFooter() {
                 <span className="sr-only">Facebook</span>
               </Link>
               <Link
-                href="#"
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
                 className="group inline-flex h-9 w-9 items-center justify-center rounded-full bg-background hover:bg-accent"
               >
@@ -110,7 +116,9 @@ export function SiteFooter() {
                 <span className="sr-only">Instagram</span>
               </Link>
               <Link
-                href="#"
+                href="https://youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="YouTube"
                 className="group inline-flex h-9 w-9 items-center justify-center rounded-full bg-background hover:bg-accent"
               >
@@ -121,7 +129,9 @@ export function SiteFooter() {
                 <span className="sr-only">YouTube</span>
               </Link>
               <Link
-                href="#"
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="LinkedIn"
                 className="group inline-flex h-9 w-9 items-center justify-center rounded-full bg-background hover:bg-accent"
               >

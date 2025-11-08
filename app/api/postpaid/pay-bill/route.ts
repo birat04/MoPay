@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    if (postpaidAccount.usedAmount <= 0) {
+    if (postpaidAccount.usedAmount.toNumber() <= 0) {
       return NextResponse.json(
         { error: 'No outstanding amount to pay' },
         { status: 400 }
